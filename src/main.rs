@@ -16,7 +16,7 @@ fn main() {
     let img: DynamicImage = image::open(file_name.trim()).unwrap().grayscale().resize(
         64,
         64,
-        image::imageops::FilterType::Nearest,
+        image::imageops::FilterType::Triangle,
     );
     for i in img.pixels() {
         values.push(i.2[0]);
